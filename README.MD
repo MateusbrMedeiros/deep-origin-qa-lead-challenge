@@ -22,8 +22,8 @@ This project contains end-to-end API tests for the [DummyJSON](https://dummyjson
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/dummyjson-api-tests.git
-cd dummyjson-api-tests
+git clone https://github.com/MateusbrMedeiros/deep-origin-qa-lead-challenge.git
+cd deep-origin-qa-lead-challenge
 ```
 
 ### 2. Install dependencies

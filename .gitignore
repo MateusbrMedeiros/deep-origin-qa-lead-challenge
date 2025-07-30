@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Environment variables
+.env
+.env.*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Output from testing
+test-output/
+
+# MacOS and Linux specific
+*.swp

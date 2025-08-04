@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:report": "npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports/json,overwrite=false,html=false,json=true && npx mochawesome-merge cypress/reports/json/*.json > cypress/reports/report.json && npx marge cypress/reports/report.json -f report -o cypress/reports/html"
+    "test:report": "npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports/json,overwrite=false,html=false,json=true && npx mochawesome-merge cypress/reports/json/*.json > cypress/reports/report.json && npx marge cypress/reports/report.json -f index -o cypress/reports/html"
   },
   "keywords": [],
   "author": "",

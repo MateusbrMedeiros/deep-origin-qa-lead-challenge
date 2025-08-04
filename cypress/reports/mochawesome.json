@@ -1,0 +1,278 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-04T16:53:18.417Z",
+    "end": "2025-08-04T16:53:20.499Z",
+    "duration": 2082,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f00ca91-7bba-408b-b300-d7c1c64ac689",
+      "title": "",
+      "fullFile": "cypress\\e2e\\categories.cy.ts",
+      "file": "cypress\\e2e\\categories.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99ab2dd2-f5c3-49b7-883c-89cbf19674c4",
+          "title": "GET /products/category/:category",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "dd1d6a98-dfe9-4431-8a24-f73c4922f3d3",
+              "title": "Success cases",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return products from the category \"smartphones\"",
+                  "fullTitle": "GET /products/category/:category Success cases should return products from the category \"smartphones\"",
+                  "timedOut": null,
+                  "duration": 628,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)(validCategory).then((res) => {\n    expect(res.status).to.eq(200);\n    expect(res.body).to.have.property('products').that.is.an('array').and\n        .not.empty;\n    res.body.products.forEach((product) => {\n        var _a;\n        expect(product).to.have.property('category');\n        expect((_a = product.category) === null || _a === void 0 ? void 0 : _a.toLowerCase()).to.eq(validCategory);\n    });\n});",
+                  "err": {},
+                  "uuid": "6164f8b8-8dce-480a-8d10-98311a95c281",
+                  "parentUUID": "dd1d6a98-dfe9-4431-8a24-f73c4922f3d3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should return the same results regardless of casing",
+                  "fullTitle": "GET /products/category/:category Success cases should return the same results regardless of casing",
+                  "timedOut": null,
+                  "duration": 207,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)('SmartPhones').then((res) => {\n    expect(res.status).to.eq(200);\n    expect(res.body.products).to.be.an('array').and.not.empty;\n    res.body.products.forEach((product) => {\n        var _a;\n        expect((_a = product.category) === null || _a === void 0 ? void 0 : _a.toLowerCase()).to.eq(validCategory);\n    });\n});",
+                  "err": {},
+                  "uuid": "91c56357-e393-4c3c-9710-66011c862a03",
+                  "parentUUID": "dd1d6a98-dfe9-4431-8a24-f73c4922f3d3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should include required product fields",
+                  "fullTitle": "GET /products/category/:category Success cases should include required product fields",
+                  "timedOut": null,
+                  "duration": 177,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)(validCategory).then((res) => {\n    expect(res.status).to.eq(200);\n    const product = res.body.products[0];\n    expect(product).to.include.all.keys('id', 'title', 'price', 'category');\n});",
+                  "err": {},
+                  "uuid": "8a891f6e-44db-4ad7-afb4-554bc65d864c",
+                  "parentUUID": "dd1d6a98-dfe9-4431-8a24-f73c4922f3d3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should return consistent results for the same category",
+                  "fullTitle": "GET /products/category/:category Success cases should return consistent results for the same category",
+                  "timedOut": null,
+                  "duration": 319,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)(validCategory).then((res1) => {\n    (0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)(validCategory).then((res2) => {\n        expect(res1.status).to.eq(200);\n        expect(res2.status).to.eq(200);\n        expect(res1.body.products).to.deep.eq(res2.body.products);\n    });\n});",
+                  "err": {},
+                  "uuid": "a263d2ba-88cc-4596-8e62-8393b68bf061",
+                  "parentUUID": "dd1d6a98-dfe9-4431-8a24-f73c4922f3d3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6164f8b8-8dce-480a-8d10-98311a95c281",
+                "91c56357-e393-4c3c-9710-66011c862a03",
+                "8a891f6e-44db-4ad7-afb4-554bc65d864c",
+                "a263d2ba-88cc-4596-8e62-8393b68bf061"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1331,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f799526c-368e-442b-bb4b-0c1ab6f5c7ca",
+              "title": "Validation and error cases",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return empty or error for invalid category",
+                  "fullTitle": "GET /products/category/:category Validation and error cases should return empty or error for invalid category",
+                  "timedOut": null,
+                  "duration": 160,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)(invalidCategory, { failOnStatusCode: false }).then((res) => {\n    expect(res.status).to.be.oneOf([200, 404]);\n    if (res.status === 200) {\n        expect(res.body).to.have.property('products').that.is.an('array')\n            .and.empty;\n    }\n    else {\n        expect(res.body).to.have.property('message');\n    }\n});",
+                  "err": {},
+                  "uuid": "94c1964d-4b8d-4ebe-8e03-713620d32d5b",
+                  "parentUUID": "f799526c-368e-442b-bb4b-0c1ab6f5c7ca",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should return empty list for category with URL-encoded special characters",
+                  "fullTitle": "GET /products/category/:category Validation and error cases should return empty list for category with URL-encoded special characters",
+                  "timedOut": null,
+                  "duration": 154,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)('laptops%20and%20devices', {\n    failOnStatusCode: false,\n}).then((res) => {\n    expect(res.status).to.eq(200);\n    expect(res.body).to.have.property('products').that.is.an('array').and\n        .empty;\n    expect(res.body).to.have.property('total', 0);\n});",
+                  "err": {},
+                  "uuid": "288f6665-172a-4c07-8137-aad9a82c90d2",
+                  "parentUUID": "f799526c-368e-442b-bb4b-0c1ab6f5c7ca",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should return empty list for category with unencoded space",
+                  "fullTitle": "GET /products/category/:category Validation and error cases should return empty list for category with unencoded space",
+                  "timedOut": null,
+                  "duration": 173,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)('mobile accessories', {\n    failOnStatusCode: false,\n}).then((res) => {\n    expect(res.status).to.eq(200);\n    expect(res.body).to.have.property('products').that.is.an('array').and\n        .empty;\n    expect(res.body).to.have.property('total', 0);\n});",
+                  "err": {},
+                  "uuid": "db509001-a536-4b17-b119-40de258df314",
+                  "parentUUID": "f799526c-368e-442b-bb4b-0c1ab6f5c7ca",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should return 200 and empty product list for numeric category ID",
+                  "fullTitle": "GET /products/category/:category Validation and error cases should return 200 and empty product list for numeric category ID",
+                  "timedOut": null,
+                  "duration": 164,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0,_api_products__WEBPACK_IMPORTED_MODULE_0__.getProductsByCategory)('12345', { failOnStatusCode: false }).then((res) => {\n    expect(res.status).to.eq(200);\n    expect(res.body).to.have.property('products').that.is.an('array').and\n        .empty;\n    expect(res.body).to.have.property('total', 0);\n});",
+                  "err": {},
+                  "uuid": "d5281e6f-86f7-46c0-8651-ab5394ac0c29",
+                  "parentUUID": "f799526c-368e-442b-bb4b-0c1ab6f5c7ca",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "94c1964d-4b8d-4ebe-8e03-713620d32d5b",
+                "288f6665-172a-4c07-8137-aad9a82c90d2",
+                "db509001-a536-4b17-b119-40de258df314",
+                "d5281e6f-86f7-46c0-8651-ab5394ac0c29"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 651,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

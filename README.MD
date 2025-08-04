@@ -32,10 +32,10 @@ cd deep-origin-qa-lead-challenge
 npm install
 ```
 
-### 3. Run tests (all)
+### 3. Run tests (locally)
 
 ```bash
-npx cypress run
+npm run test
 ```
 
 ### 4. Run tests in UI mode

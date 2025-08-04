@@ -39,3 +39,6 @@ test-output/
 
 # MacOS and Linux specific
 *.swp
+
+# Cypress reports
+cypress/reports/

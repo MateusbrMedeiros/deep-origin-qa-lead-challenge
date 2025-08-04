@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test:report": "cypress run && npm run report:merge && npm run report:generate",
+    "test:report": "rimraf cypress/reports && cypress run && npm run report:merge && npm run report:generate",
     "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
     "report:generate": "marge cypress/reports/report.json --reportDir cypress/reports/html"
   },
@@ -21,6 +21,7 @@
     "mochawesome-merge": "^5.0.0",
     "mochawesome-report-generator": "^6.2.0",
     "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }

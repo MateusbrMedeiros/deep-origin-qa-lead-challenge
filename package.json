@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cypress run",
     "test:report": "rimraf cypress/reports && cypress run && npm run report:merge && npm run report:generate",
-    "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
+    "report:merge": "mochawesome-merge \"cypress/reports/mocha/*.json\" > cypress/reports/report.json",
     "report:generate": "marge cypress/reports/report.json --reportDir cypress/reports/html"
   },
   "keywords": [],

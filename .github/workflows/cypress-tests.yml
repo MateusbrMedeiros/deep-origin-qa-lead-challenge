@@ -6,6 +6,9 @@ on:
     branches:
       - '**'
 
+permissions:
+  contents: write
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest

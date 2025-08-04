@@ -30,3 +30,10 @@ jobs:
         with:
           name: cypress-html-report
           path: cypress/reports/html
+
+      - name: Deploy report to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: cypress/reports/html
+          clean: true
